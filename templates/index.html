@@ -1,0 +1,822 @@
+{% extends 'base.html' %} 
+{% block content %}
+{% load static %}
+<main>
+
+    <!--
+      - BANNER
+    -->
+
+    <div class="banner" >
+
+      <div class="container">
+
+        <div class="slider-container has-scrollbar">
+
+          <div class="slider-item">
+
+            <img src="{% static './assets/images/products/Hospital/Emergency.jpg'%} " alt="banner" class="banner-img">
+
+            <div class="banner-content">
+
+              <!-- <p class="banner-subtitle">Trending item</p> -->
+
+              <h2 class="banner-title" style="color:white">Bridging the Gap in Healthcare Emergencies</h2>
+              <!-- <p class="banner-text">
+                Safeguard against an uncertain future
+              </p> -->
+              <p class="banner-text" style="color:white">
+                We Care
+              </p>
+
+              <a href="#" class="banner-btn">Get a Hospital Near Me</a>
+
+            </div>
+
+          </div>
+
+          <div class="slider-item">
+
+            <img src="{% static './assets/images/products/Hospital/Amb2.jpg'%} " alt="gold" class="banner-img">
+
+            <div class="banner-content">
+
+              <!-- <p class="banner-subtitle">Trending accessories</p> -->
+
+              <h2 class="banner-title" style="color:white">
+                Empowering Health, One Emergency at a Time</h2>
+
+              <p class="banner-text" style="color:white">
+                We Care
+                {% comment %} at &dollar; <b>15</b>.00 {% endcomment %}
+              </p>
+
+              <a href="#" class="banner-btn">Get a Hospital Near Me</a>
+
+            </div>
+
+          </div>
+
+          <div class="slider-item">
+
+            <!-- /<img src="{% static './assets/images/products/Hospital/Amb9.jpg'%} " alt="banner" class="banner-img"> -->
+
+            <div class="banner-content">
+
+              <!-- <p class="banner-subtitle">Sale Offer</p> -->
+
+              <h2 class="banner-title">Ensuring Care When Seconds Count</h2>
+
+              <p class="banner-text">
+                We Care
+                 {% comment %} at &dollar; <b>29</b>.99 {% endcomment %}
+              </p>
+
+              <a href="#" class="banner-btn">Reach Out</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!--
+      - CATEGORY
+    -->
+
+    <div class="category">
+
+      <div class="container">
+
+        <div class="category-item-container has-scrollbar">
+
+          {% for category in links %}
+
+          <div class="category-item">
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">{{ category.category_name }}</h3>
+
+                {% comment %} <p class="category-item-amount">(53)</p> {% endcomment %}
+              </div>
+
+              <a href="{{category.get_url}}" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          {% endfor %}
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <main class="main">
+      <!--=============== SECURITY ===============-->
+      <section class="security section container" style="margin-bottom: 20px; ">
+        <div class="security__container grid">
+            <div class="security__data">
+                <h2 class="section__title-center" sty>MediLink</h2>
+                <p class="security__description" style="font-size:0.875rem; font-weight: 300; background-color: rgba(243, 232, 232, 0.849);">
+                  Medilink offers a comprehensive database of emergency services, including nearby hospitals, urgent care centers, clinics,
+                   and emergency transport services. This valuable resource proves invaluable during health emergencies,
+                   allowing users to swiftly locate the nearest medical facilities in their vicinity and identify hospitals capable of accommodating their needs together with fast and reliable medical transport services.
+                </p>
+            </div>
+        </div>
+      </section>
+
+
+    </main>
+
+    <div>
+
+      <div class="container">
+
+        <div class="testimonials-box">
+
+          <!--
+            - TESTIMONIALS
+          -->
+
+          <div class="testimonial">
+
+            <h2 class="title">A word from our team</h2>
+
+            <div class="testimonial-card">
+
+
+              <p class="testimonial-name">The MediLink Team</p>
+
+              {% comment %} <p class="testimonial-title">CEO & Founder Dabec Gold and Real Estate</p> {% endcomment %}
+
+              <img src="{% static './assets/images/icons/quotes.svg'%}" alt="quotation" class="quotation-img" width="26">
+
+              <p class="testimonial-desc">
+                Get the best care and services in case of emergencies,coupled with real time data on availability of hospital services.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!--
+            - CTA
+          -->
+
+          <div class="cta-container">
+
+            <img src="{% static './assets/images/ambulance.jpg'%}" alt="summer collection" class="cta-banner">
+
+            <a href="#" class="cta-content">
+
+              <p class="discount">We Care</p>
+
+            </a>
+
+          </div>
+
+
+
+          <!--
+            - SERVICE
+          -->
+
+          <div class="service">
+
+            <h2 class="title">Our Services</h2>
+
+            <div class="service-container">
+
+              <a href="#" class="service-item">
+
+                <div class="service-icon">
+                  <ion-icon name="boat-outline"></ion-icon>
+                </div>
+
+                <div class="service-content">
+
+                  <h3 class="service-title">Proximity Based Hospital Location and Directions</h3>
+
+                </div>
+
+              </a>
+
+              <a href="#" class="service-item">
+
+                <div class="service-icon">
+                  <ion-icon name="rocket-outline"></ion-icon>
+                </div>
+
+                <div class="service-content">
+
+                  <h3 class="service-title">Proximity Based Ambulance and Medical Shuttle Servces</h3>
+
+                </div>
+
+              </a>
+
+              <a href="#" class="service-item">
+
+                <div class="service-icon">
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
+
+                <div class="service-content">
+
+                  <h3 class="service-title">Emergency Contact Information</h3>
+
+                </div>
+
+              </a>
+
+              <a href="#" class="service-item">
+
+                <div class="service-icon">
+                  <ion-icon name="arrow-undo-outline"></ion-icon>
+                </div>
+
+                <div class="service-content">
+
+                  <h3 class="service-title">Real Time Bed and Service Availability</h3>
+
+                </div>
+
+              </a>
+
+              <a href="#" class="service-item">
+
+                <div class="service-icon">
+                  <ion-icon name="ticket-outline"></ion-icon>
+                </div>
+
+                <div class="service-content">
+
+                  <h3 class="service-title">Leasing of Hospital Services</h3>
+
+                </div>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!--
+      - PRODUCT
+    -->
+
+    <div class="product-container">
+
+      <div class="container">
+
+
+        <!--
+          - SIDEBAR
+        -->
+
+        <div class="sidebar  has-scrollbar" data-mobile-menu>
+
+          <div class="sidebar-category">
+            
+
+            <div class="sidebar-top">
+             
+
+              <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+            
+            <ul class="sidebar-menu-category-list">
+                <a href="{% url 'store'%}">
+                <li class="sidebar-menu-category">
+
+                  <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                    <div class="menu-title-flex">
+                      <img src="{% static './assets/images/products/Hospital/Hospital.jpg'%} " alt="all" width="20" height="20"
+                        class="menu-title-img">
+
+                      <p class="menu-title">All Hospitals</p>
+                    </div>
+
+                    <div>
+                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                    </div>
+
+                  </button>
+                </li>
+              </a>
+
+
+
+            </ul>
+
+          </div>
+
+          <div class="product-showcase">
+
+            <h3 class="showcase-heading">Affordable Hospitals</h3>
+
+            <div class="showcase-wrapper">
+
+              <div class="showcase-container">
+
+                <div class="showcase">
+
+                  <a href="#" class="showcase-img-box">
+                    <img src="{% static './assets/images/products/Hospital/hospital-svgrepo-com.svg'%}" alt="best" width="75" height="75"
+                      class="showcase-img">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">The Nairobi Hospital</h4>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                    <!--
+                    <div class="price-box">
+                      <p class="price">$450.00</p>
+                    </div>
+                  -->
+                  </div>
+
+                </div>
+
+                <div class="showcase">
+
+                  <a href="#" class="showcase-img-box">
+                    <img src="{% static './assets/images/products/Hospital/hospitalBuilding.svg'%} " alt="men's hoodies t-shirt" class="showcase-img"
+                      width="75" height="75">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">The Agha Kan Hospital</h4>
+                    </a>
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                    <!--
+                    <div class="price-box">
+                      <p class="price">$700.00</p>
+                    </div>
+                  -->
+                  </div>
+
+                </div>
+
+                <div class="showcase">
+
+                  <a href="#" class="showcase-img-box">
+                    <img src="{% static './assets/images/products/Hospital/ambulanceLogo.svg'%} " alt="100 x 1g CombiBar® " class="showcase-img" width="75"
+                      height="75">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">Mbagathi county hospital</h4>
+                    </a>
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <!--
+                    <div class="price-box">
+                      <p class="price">$3000.00</p>
+                    </div>
+                  -->
+
+                </div>
+
+                </div>
+
+                <div class="showcase">
+
+                  <a href="#" class="showcase-img-box">
+                    <img src="{% static './assets/images/products/Hospital/Stethescope.svg'%} " alt="1 Kilo Silver Bar" class="showcase-img" width="75"
+                      height="75">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">Avenue Hospital</h4>
+                    </a>
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                    <!--
+                    <div class="price-box">
+                      <p class="price">$12.00</p>
+                    </div>
+                  -->
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="product-box">
+
+          <div class="product-featured">
+
+            <h2 class="title">New Market Entrant</h2>
+
+            <div class="showcase-wrapper has-scrollbar">
+
+
+              <div class="showcase-container">
+
+                <div class="showcase">
+                  <a href="#">
+                    <div class="showcase-banner">
+                      <img src="https://images.pexels.com/photos/6754163/pexels-photo-6754163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="gold"
+                        class="showcase-img">
+                    </div>
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                    <a href="#">
+
+                      <a href="#">
+                        <h3 class="showcase-title">Avenue Rescue Services </h3>
+                      </a>
+
+                      <p class="showcase-desc">
+                        Avenue Rescue provide affordable quality EMTs, First Aid and Ambulance services to patients
+                      </p>
+
+                    </a>
+
+                    <div class="price-box">
+                      <p class="price">+254203745750</p>
+
+                    </div>
+                    {% comment %} <div class="showcase-status">
+                      <div class="wrapper">
+                        <p>
+                          already sold: <b>20</b>
+                        </p>
+
+                        <p>
+                          available: <b>40</b>
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <div class="countdown-box">
+
+                      <p class="countdown-desc">
+                        Hurry Up Before The Offer Ends
+                      </p>
+
+
+                    </div>  {% endcomment %}
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!--
+            GENERAL
+          -->
+          <div class="product-main">
+
+
+            <h2 class="title" style="text-transform: uppercase;">GENERAL MEDICINE AND SURGERY</h2>
+
+            <div class="product-grid">
+
+              {% for general in home_general%}
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <a href="{{ general.get_url }}">
+                  {% comment %} <img src="{{ general.image.url }}" alt=""
+                    class="product-img default" width="300">
+                  <img src="{{ general.image.url }}" alt=""
+                    class="product-img hover" width="300"> {% endcomment %}
+                  </a>
+
+                  <div class="showcase-actions">
+
+                    <a class="btn-action" href="{{ general.get_url }}">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </a>
+
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="{{general.category.get_url}}" class="showcase-category">{{ general.category }}</a>
+
+                  <h3>
+                    <a href="{{ general.get_url }}" class="showcase-title">{{ general.hospital_name }}</a>
+                  </h3>
+
+                  <h3>
+                    <a href="#" class="showcase-title">Contact: {{ general.phone_number }}</a>
+                  </h3>
+                  {% comment %} <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div> {% endcomment %}
+
+                  <div class="price-box">
+                    <p class="price">Location:{{ general.location }}</p>
+                  </div>
+
+                </div>
+
+              </div>
+              {% endfor %}
+            </div>
+
+          </div>
+
+            <!--
+            -SPECIALTY
+          -->
+
+          <div class="product-main">
+
+
+            <h2 class="title" style="text-transform: uppercase;">SPECIALTY HOSPITALS</h2>
+
+            <div class="product-grid">
+
+              {% for specialty in home_specialty%}
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <a href="{{ specialty.get_url }}">
+                  {% comment %} <img src="{{ specialty.image.url }}" alt=""
+                    class="product-img default" width="300">
+                  <img src="{{ specialty.image.url }}" alt=""
+                    class="product-img hover" width="300"> {% endcomment %}
+                  </a>
+
+                  <div class="showcase-actions">
+
+                    <a class="btn-action" href="{{ specialty.get_url }}">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </a>
+
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="{{specialty.category.get_url}}" class="showcase-category">{{ specialty.category }}</a>
+
+                  <h3>
+                    <a href="{{ specialty.get_url }}" class="showcase-title">{{ specialty.hospital_name }}</a>
+                  </h3>
+
+                  <h3>
+                    <a href="#" class="showcase-title">Contact: {{ specialty.phone_number }}</a>
+                  </h3>
+                  {% comment %} <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div> {% endcomment %}
+
+                  <div class="price-box">
+                    <p class="price">Location:{{ specialty.location }}</p>
+                  </div>
+
+                </div>
+
+              </div>
+              {% endfor %}
+
+            </div>
+
+          </div>
+
+            <!--
+            - PSYCHIATRIC
+          -->
+
+          <div class="product-main">
+
+
+            <h2 class="title" style="text-transform: uppercase;">PSYCHIATRIC HOSPITALS</h2>
+
+            <div class="product-grid">
+              {% for psychiatric in home_psychiatric%}
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <a href="{{ psychiatric.get_url }}">
+                  {% comment %} <img src="{{ psychiatric.image.url }}" alt=""
+                    class="product-img default" width="300">
+                  <img src="{{ psychiatric.image.url }}" alt=""
+                    class="product-img hover" width="300"> {% endcomment %}
+                  </a>
+
+                  <div class="showcase-actions">
+
+                    <a class="btn-action" href="{{ psychiatric.get_url }}">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </a>
+
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="{{psychiatric.category.get_url}}" class="showcase-category">{{ psychiatric.category }}</a>
+
+                  <h3>
+                    <a href="{{ psychiatric.get_url }}" class="showcase-title">{{ psychiatric.hospital_name }}</a>
+                  </h3>
+
+                  <h3>
+                    <a href="#" class="showcase-title">Contact: {{ psychiatric.phone_number }}</a>
+                  </h3>
+                  {% comment %} <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div> {% endcomment %}
+
+                  <div class="price-box">
+                    <p class="price">Location:{{ psychiatric.location }}</p>
+                  </div>
+
+                </div>
+
+              </div>
+              {% endfor %}
+
+            </div>
+
+          </div>
+
+            <!--
+            - GOLD Nuggets
+          -->
+
+          <div class="product-main">
+
+
+            <h2 class="title" style="text-transform: uppercase;">CLINICS</h2>
+
+            <div class="product-grid" >
+              {% for clinic in home_clinic%}
+
+              <div class="showcase">
+
+                <div class="showcase-banner">
+                  <a href="{{ clinic.get_url }}">
+                  {% comment %} <img src="{{ clinic.image.url }}" alt=""
+                    class="product-img default" width="300">
+                  <img src="{{ clinic.image.url }}" alt=""
+                    class="product-img hover" width="300"> {% endcomment %}
+                  </a>
+
+                  <div class="showcase-actions">
+
+                    <a class="btn-action" href="{{ clinic.get_url }}">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </a>
+
+                  </div>
+                </div>
+
+                <div class="showcase-content">
+                  <a href="{{clinic.category.get_url}}" class="showcase-category">{{ clinic.category }}</a>
+
+                  <h3>
+                    <a href="{{ clinic.get_url }}" class="showcase-title">{{ clinic.hospital_name }}</a>
+                  </h3>
+
+                  <h3>
+                    <a href="#" class="showcase-title">Contact: {{ clinic.phone_number }}</a>
+                  </h3>
+                  {% comment %} <div class="showcase-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div> {% endcomment %}
+
+                  <div class="price-box">
+                    <p class="price">Location:{{ clinic.location }}</p>
+                  </div>
+
+                </div>
+
+              </div>
+              {% endfor %}
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!--
+      - TESTIMONIALS, CTA & SERVICE
+    -->
+
+
+
+
+
+
+
+    <!--
+      - BLOG
+    -->
+
+  </main>
+
+
+{% endblock content %}
+
